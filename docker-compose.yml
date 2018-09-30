@@ -3,21 +3,8 @@ services:
   webapp:
     image: santam
     ports:
-      - "8001:80"
-    secrets:
-      - db_user
-      - db_host
-      - db_port
-      - db_password
-      - db_database
-secrets:
-  db_user:
-    external: true
-  db_host:
-    external: true
-  db_port:
-    external: true
-  db_password:
-    external: true
-  db_database:
-    external: true
+      - "80:80"
+    volumes:
+      - santam-storage:/var/www/html/storage
+volumes:
+  santam-storage:
