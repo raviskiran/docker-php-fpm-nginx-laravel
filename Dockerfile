@@ -281,7 +281,7 @@ RUN git clone https://63da228fa1c80eaa6a24415efc3b7c9c0f79d1d9@github.com/ravisk
 
 RUN composer update
 
-RUN npm i laravel-mix --max_old_space_size=8192
+#RUN npm i laravel-mix --max_old_space_size=8192
 
 RUN touch /var/log/cron.log
 
