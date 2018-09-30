@@ -277,7 +277,7 @@ RUN apk add --update nodejs nodejs-npm
 
 WORKDIR /var/www/html/
 
-RUN git clone https://63da228fa1c80eaa6a24415efc3b7c9c0f79d1d9@github.com/raviskiran/santam-softlabs.git .
+RUN git clone https://42f94061f5895275051ef14e84561ec4e8542aca@github.com/raviskiran/santam-softlabs.git .
 
 RUN composer update
 
