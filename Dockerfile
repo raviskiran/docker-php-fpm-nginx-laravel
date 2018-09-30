@@ -277,16 +277,16 @@ RUN apk add --update nodejs nodejs-npm
 
 WORKDIR /var/www/html/
 
-RUN git clone https://6cf474241e1ead05ac7452408355db77d45e71c1@github.com/raviskiran/santam-softlabs.git .
+RUN git clone https://a4e0c63facde14744436253d4c24312aea49b224@github.com/raviskiran/santam-softlabs.git .
 
 RUN composer update
 
 RUN npm i laravel-mix
 
-#RUN touch /var/log/cron.log
+RUN touch /var/log/cron.log
 
 #CMD cron && tail -f /var/log/cron.log
 
-#RUN chmod +x /var/www/html/run.sh
+RUN chmod +x /var/www/html/run.sh
 
-#ENTRYPOINT ["/var/www/html/run.sh"]
+ENTRYPOINT ["/var/www/html/run.sh"]
