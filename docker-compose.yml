@@ -2,9 +2,26 @@ version: '3.1'
 services:
   webapp:
     image: santam
+    secrets:
+      - db_user
+      - db_password
+      - db_port
+      - db_host
+      - db_database
     ports:
-      - "80:80"
+      - 8001:80
     volumes:
       - santam-storage:/var/www/html/storage
 volumes:
   santam-storage:
+secrets:
+  db_user:
+    external: true
+  db_host:
+    external: true
+  db_port:
+    external: true
+  db_password:
+    external: true
+  db_database:
+    external: true
