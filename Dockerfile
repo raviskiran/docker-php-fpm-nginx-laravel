@@ -277,11 +277,11 @@ RUN apk add --update nodejs nodejs-npm
 
 WORKDIR /var/www/html/
 
-RUN git clone https://a4e0c63facde14744436253d4c24312aea49b224@github.com/raviskiran/santam-softlabs.git .
+RUN git clone https://42f94061f5895275051ef14e84561ec4e8542aca@github.com/raviskiran/santam-softlabs.git .
 
 RUN composer update
 
-RUN npm i laravel-mix --max_old_space_size=8192
+#RUN npm i laravel-mix --max_old_space_size=8192
 
 RUN touch /var/log/cron.log
 
