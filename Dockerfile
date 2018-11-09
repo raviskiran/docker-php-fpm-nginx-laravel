@@ -1,7 +1,5 @@
 FROM php:7.2.4-fpm-alpine
 
-LABEL maintainer="Ric Harvey <ric@ngd.io>"
-
 ENV php_conf /usr/local/etc/php-fpm.conf
 ENV fpm_conf /usr/local/etc/php-fpm.d/www.conf
 ENV php_vars /usr/local/etc/php/conf.d/docker-vars.ini
